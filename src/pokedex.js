@@ -2,6 +2,7 @@ import React from "react";
 import Pokecard from "./pokecard";
 import randomPicks from "./helpers";
 import basicPokemon from "./default";
+import "./pokedex.css";
 
 import { Container, Row, Col } from 'react-bootstrap'; 
 
@@ -13,8 +14,8 @@ function Pokedex(){
     const secondHalf = selectedPokemon.slice(4, 8);
 
     return (
-        <Container>
-            <h1>Pokedex</h1>
+        <Container className="pokedex">
+            <h1 className="title">Pokedex</h1>
             <Row md={4}> 
                 {firstHalf.map(pokemon => (
                     <Col key={pokemon.id}>
